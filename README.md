@@ -1,6 +1,18 @@
-# Mealy 111 Sequence Detector (Simulink)
+# 111 Sequence Detector (Simulink)
 
 This project features the design, simulation, and behavioral testing of a Mealy-type `111` sequence detector using discrete logic gates and D Flip-Flops in MATLAB/Simulink.
+
+## Origin: In-Class Design Assignment
+
+This project started as an in-class assignment: design a synchronous D flip-flop circuit with one input and one output, where the output `y = 1` whenever three or more consecutive `1`s are observed, and `0` otherwise. I worked the design out by hand first, then built it out into the full Simulink model below.
+
+![Handwritten in-class assignment: transition table, state diagram, K-maps, and hand-drawn circuit](InClassAssignment.png)
+
+The handwritten work covers:
+* **Transition table:** present states ($A_n$, $B_n$), input $X$, next states, D flip-flop inputs ($D_A$, $D_B$), and output $y$.
+* **State diagram:** four states (`00` → `01` → `11` → `10`) with transitions labeled by the input.
+* **K-maps and simplified equations:** $D_A = X(A + B)$ and $D_B = X(A + \overline{B})$.
+* **Hand-drawn circuit:** two D flip-flops with a shared clock and the output gate, which became the schematic below.
 
 ## Circuit Schematic
 
